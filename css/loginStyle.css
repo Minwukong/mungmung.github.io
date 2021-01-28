@@ -7,7 +7,7 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: url(./designSource/background.jpg) no-repeat center;
+    background: url(designSource/background.jpg) no-repeat center;
     background-size: cover;
 }
 body::before{
