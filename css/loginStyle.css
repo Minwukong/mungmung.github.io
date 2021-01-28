@@ -7,7 +7,11 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: url(/designSource/background.jpg) no-repeat center;
+<<<<<<< HEAD
+    background: url(designSource/background2.png) no-repeat center;
+=======
+    background: url("./designSource/background.jpg") no-repeat center;
+>>>>>>> 8cafdc112c2a3a13a950bacbcf4924de5c41292d
     background-size: cover;
 }
 body::before{
