@@ -30,6 +30,8 @@ if(isset($_GET['id'])) {
     require_once('./view/html_top.php');
     require_once('./view/html_slide.php');
 ?>
+    <div id="Wrap" class="wrap_posts">
+        <h1><a class="main_title" href="index.php">게시판</a></h1>
         <div class="post_box">
             <a class="create" id="create" href="create.php">글쓰기</a>
             <div class="postImg_box">

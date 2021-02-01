@@ -28,6 +28,7 @@ $result = mysqli_query($conn, $sql);
     <div id="Wrap" class="wrap_posts">
         <h1><a class="main_title" href="index.php">게시판</a></h1>
         <div class="show_box">
+            <div class="cru_box">
             <?php
             if($result === false){
                 echo '저장하는 과정에서 문제가 생겼습니다. 관리자에게 문의해주세요.';
@@ -36,6 +37,7 @@ $result = mysqli_query($conn, $sql);
                 echo '삭제에 성공했습니다.<br><br> <a href="index.php">돌아가기</a>';
             }
             ?>
+            </div>
         </div>
     </div>
 <?php

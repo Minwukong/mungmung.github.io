@@ -17,18 +17,19 @@ if(isset($_GET['id'])) {
     $update_link = '<a href="update.php?id='.$_GET['id'].'">update</a>';
 }
     require_once('./view/html_top.php');
-    require_once('./view/html_slide.php');
 ?>
-    <div class="show_box">
-        <div class="cru_box">
-        <form action="process_update.php" method="POST">
-            <input type="hidden" name="id" value="<?=$_GET['id']?>">
-            <p>제목<input class="title_box" type="text" name="title" placeholder="제목" autocomplete="off" value="<?=$article['title']?>"></p>
-            <p>내용<textarea class="description_box" name="description" placeholder="내용"><?=$article['description']?></textarea></p>
-            <p><input class="submit_btn" type="submit"></p>
-        </form>
+    <div id="Wrap" class="wrap_posts">
+        <h1><a class="main_title" href="index.php">게시판</a></h1>
+        <div class="show_box">
+            <div class="cru_box">
+            <form action="process_update.php" method="POST">
+                <input type="hidden" name="id" value="<?=$_GET['id']?>">
+                <p>제목<input class="title_box" type="text" name="title" placeholder="제목" autocomplete="off" value="<?=$article['title']?>"></p>
+                <p>내용<textarea class="description_box" name="description" placeholder="내용"><?=$article['description']?></textarea></p>
+                <p><input class="submit_btn" type="submit"></p>
+            </form>
+            </div>
         </div>
-    </div>
 <?php
     require_once('./view/bottom.php');
 ?>
