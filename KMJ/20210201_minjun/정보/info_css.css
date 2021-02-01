@@ -1,0 +1,81 @@
+#dog{
+    width: 300px;
+    height: 300px;
+    margin-top: 200px;
+    position:absolute;
+    left: 100px; 
+   width: 450px;
+   bottom: 500px;
+}
+
+#cat{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    left: 600px; 
+    width: 450px;
+    bottom: 500px;
+}
+
+#etc{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    left: 1100px; 
+    width: 450px;
+    bottom: 500px;
+    
+}
+
+#dog_text{
+   left: 270px; 
+   width: 450px;
+   bottom: 590px;
+   font-size: 1.8em; 
+   font-weight: bold; 
+   position: absolute;
+   opacity: 0;
+   
+}
+
+#cat_text{
+    left: 780; 
+    width: 450px;
+    bottom: 590px;
+    font-size: 1.8em; 
+    font-weight: bold; 
+    position: absolute;
+    opacity: 0;
+ }
+
+ #etc_text{
+    left: 1300px; 
+    width: 450px;
+    bottom: 590px;
+    font-size: 1.8em; 
+    font-weight: bold; 
+    position: absolute;
+    opacity: 0;
+ }
+
+ div{
+     width: 300;
+     height: 300;
+ }
+
+ .tg  {border-collapse:collapse;border-spacing:0;}
+
+ .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+   overflow:hidden;padding:10px 5px;word-break:normal;}
+
+ .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+   font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+
+ .tg .tg-5e02{background-color:#f7dbd9;text-align:center;vertical-align:top}
+ 
+ .tg .tg-visl{background-color:#ffccc9;font-family:Impact, Charcoal, sans-serif !important;;font-size:20px;font-weight:bold;
+   text-align:center;vertical-align:top}
+
+ .tg .tg-4klx{background-color:#f7dbd9;font-size:22px;text-align:center;vertical-align:top}
+
+ .tg .tg-ybzk{background-color:#f7dbd9;font-size:23px;text-align:center;vertical-align:top}
