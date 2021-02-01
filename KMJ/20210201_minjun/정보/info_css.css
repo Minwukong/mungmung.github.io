@@ -1,0 +1,64 @@
+#dog{
+    width: 300px;
+    height: 300px;
+    margin-top: 200px;
+    position:absolute;
+    left: 100px; 
+   width: 450px;
+   bottom: 500px;
+}
+
+#cat{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    left: 600px; 
+    width: 450px;
+    bottom: 500px;
+}
+
+#etc{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    left: 1100px; 
+    width: 450px;
+    bottom: 500px;
+    
+}
+
+#dog_text{
+   left: 270px; 
+   width: 450px;
+   bottom: 590px;
+   font-size: 1.8em; 
+   font-weight: bold; 
+   position: absolute;
+   opacity: 0;
+   
+}
+
+#cat_text{
+    left: 780; 
+    width: 450px;
+    bottom: 590px;
+    font-size: 1.8em; 
+    font-weight: bold; 
+    position: absolute;
+    opacity: 0;
+ }
+
+ #etc_text{
+    left: 1300px; 
+    width: 450px;
+    bottom: 590px;
+    font-size: 1.8em; 
+    font-weight: bold; 
+    position: absolute;
+    opacity: 0;
+ }
+
+ div{
+     width: 300;
+     height: 300;
+ }
