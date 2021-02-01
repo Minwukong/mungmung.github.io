@@ -21,6 +21,7 @@ $result = mysqli_query($conn, $sql);
 
     require_once('./view/html_top.php');
 ?>
+    </div>
     <div id="Wrap" class="wrap_posts">
         <h1><a class="main_title" href="index.php">게시판</a></h1>
         <div class="show_box">

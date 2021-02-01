@@ -30,6 +30,7 @@ if(isset($_GET['id'])) {
     require_once('./view/html_top.php');
     require_once('./view/html_slide.php');
 ?>
+    </div>
     <div id="Wrap" class="wrap_posts">
         <h1><a class="main_title" href="index.php">게시판</a></h1>
         <div class="post_box">
@@ -43,9 +44,11 @@ if(isset($_GET['id'])) {
                 <?=$update_link?>
                 <?=$delete_link?>
             </div>
-            <h2><?=$article['title']?></h2>
-            <?=$article['description']?>
-            <?=$author?>
+            <div>
+                <h2><?=$article['title']?></h2>
+                <?=$article['description']?>
+                <?=$author?>
+            </div>
         </div>
 
 <?php

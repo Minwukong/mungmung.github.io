@@ -42,6 +42,9 @@
     text-align: center;
     text-decoration: none;
 }
+.wrap_punch{
+    display: block;
+}
 .f_l{
     margin-top: 2px;
 }
