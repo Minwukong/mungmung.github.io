@@ -74,9 +74,10 @@ li{
 .cru_box {
     width: 50.5vw;
     border: 1px solid black;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 0 10px 0;
+    /* margin-left: auto;
+    margin-right: auto; */
+    margin: 0 auto;
+    padding: 20px 0 20px 0;
 }
 .cru_box p{
     padding-top: 1vw;
@@ -93,6 +94,7 @@ li{
     background-color: rgb(250, 230, 164);
     border-radius: 1vw;
     border: none;
+    margin-top: 20px;
 }
 .update_delete{
     display: block;

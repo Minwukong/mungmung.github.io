@@ -1,25 +1,24 @@
-<?php 
-$conn = mysqli_connect(
-    "localhost",
-    "root",
-    "qmffhrcpdls",
-    "opentutorials");
+<?php
+require_once('./view/php_connect_root.php');
+// require_once('./view/php_connect_h.php');
+
+settype($_POST['id'], 'integer');
 $filtered = array(
-    'title'=>mysqli_real_escape_string($conn, $_POST['title']),
-    'description'=>mysqli_real_escape_string($conn, $_POST['description']),
-    'author_id'=>mysqli_real_escape_string($conn, $_POST['author_id'])
+  'id'=>mysqli_real_escape_string($conn, $_POST['id'])
 );
+
 $sql = "
-  INSERT INTO topic
-    (title, description, created, author_id)
-    VALUES(
-        '{$_POST['title']}',
-        '{$_POST['description']}',
-        NOW(),
-        {$filtered['author_id']}
-    )    
+  DELETE
+    FROM topic
+    WHERE id = {$filtered['id']}
 ";
 $result = mysqli_query($conn, $sql);
+// if($result === false){
+//   echo '저장하는 과정에서 문제가 생겼습니다. 관리자에게 문의해주세요';
+//   error_log(mysqli_error($conn));
+// } else {
+//   echo '삭제에 성공했습니다. <a href="index.php">돌아가기</a>';
+// }
 
     require_once('./view/html_top.php');
 ?>
@@ -32,11 +31,12 @@ $result = mysqli_query($conn, $sql);
                 echo '저장하는 과정에서 문제가 생겼습니다. 관리자에게 문의해주세요.';
                 error_log(mysqli_error($conn));
             } else {
-                echo '성공했습니다.<br><br> <a href="index.php">돌아가기</a>';
+                echo '삭제에 성공했습니다.<br><br> <a href="index.php">돌아가기</a>';
             }
             ?>
             </div>
         </div>
+    </div>
 <?php
     require_once('./view/bottom.php');
 ?>

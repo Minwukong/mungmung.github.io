@@ -1,9 +1,6 @@
 <?php
-$conn = mysqli_connect(
-  'localhost',
-  'root',
-  'qmffhrcpdls',
-  'opentutorials');
+    require_once('php_connect_root.php');
+    // require_once('php_connect_h.php');
 
 $sql = "SELECT * FROM topic";
 $result = mysqli_query($conn, $sql);

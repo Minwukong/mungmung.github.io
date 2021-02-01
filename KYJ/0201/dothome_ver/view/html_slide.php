@@ -1,4 +1,4 @@
-<main id="main_content">
+        <main id="main_content">
             <div class="slideshow">
                 <div class="slideshow_slides">
                     <a href=""><img src="designSource/slides/rockrice.jpg" alt="slide1"></a>
@@ -15,5 +15,3 @@
             </div>
         </main>
     </div>
-    <div id="Wrap" class="wrap_posts">
-        <h1><a class="main_title" href="index.php">게시판</a></h1>
