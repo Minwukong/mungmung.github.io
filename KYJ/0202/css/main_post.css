@@ -77,23 +77,6 @@ li{
     margin: 0 auto;
     padding: 20px 0 20px 0;
 }
-.cru_box p{
-    padding-top: 1vw;
-}
-.title_box, .description_box{
-    width: 30vw;
-    padding: 5px;
-    margin-left: 10px;
-}
-.submit_btn{
-    width: 50px;
-    padding: 2px 5px 2px 5px;
-    color:#333;
-    background-color: rgb(250, 230, 164);
-    border-radius: 1vw;
-    border: none;
-    margin-top: 20px;
-}
 .update_delete{
     display: block;
     position: absolute;
@@ -136,4 +119,28 @@ li{
     border: none;
     /* border: 1px dotted #333; */
     transform: translateY(-1%);
+}
+.post_innerImg{
+    width: 500px;
+}
+.show_img{
+    width: 500px;
+}
+/* c,r,u */
+.cru_box p{
+    padding-top: 1vw;
+}
+.title_box, .description_box{
+    width: 30vw;
+    padding: 5px;
+    margin-left: 10px;
+}
+.submit_btn{
+    width: 50px;
+    padding: 2px 5px 2px 5px;
+    color:#333;
+    background-color: rgb(250, 230, 164);
+    border-radius: 1vw;
+    border: none;
+    margin-top: 20px;
 }

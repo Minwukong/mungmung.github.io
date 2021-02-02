@@ -11,8 +11,8 @@ $sql = "
   INSERT INTO topic
     (title, description, created, author_id)
     VALUES(
-        '{$_POST['title']}',
-        '{$_POST['description']}',
+        {$filtered['title']},
+        {$filtered['description']},
         NOW(),
         {$filtered['author_id']}
     )    

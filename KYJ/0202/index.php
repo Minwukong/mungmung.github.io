@@ -8,6 +8,8 @@ $article = array(
 $update_link = '';
 $delete_link = '';
 $author = '';
+$date = '';
+$post_inner_img = '';
 if(isset($_GET['id'])) {
     $filtered_id = mysqli_real_escape_string($conn, $_GET['id']);
     $sql = "SELECT * FROM topic LEFT JOIN author ON topic.author_id = author.id WHERE topic.id={$filtered_id}";
@@ -16,7 +18,7 @@ if(isset($_GET['id'])) {
     $article['title'] = htmlspecialchars($row['title']);
     $article['description'] = htmlspecialchars($row['description']);
     $article['name'] = htmlspecialchars($row['name']);
-    $article['img_test'] = htmlspecialchars($row['img_test']);
+    $article['created'] = htmlspecialchars($row['created']);
 
     $update_link = '<a class="update_link" href="update.php?id='.$_GET['id'].'">수정</a>';
     $delete_link = '
@@ -26,7 +28,14 @@ if(isset($_GET['id'])) {
     </form>
     ';
     $author = "<p>by {$article['name']}</p>";
+    $date = "<p>{$article['created']}</p>";
+
+    if(($row['img_test'])){
+        $post_inner_img = "<img class=\"post_innerImg\" src=\"{$row['img_test']}\">";
+    }
 }
+
+    require_once('upload.php');
 
     require_once('./view/html_top.php');
     require_once('./view/html_slide.php');
@@ -36,7 +45,7 @@ if(isset($_GET['id'])) {
         <h1><a class="main_title" href="index.php">게시판</a></h1>
         <div class="post_box">
             <a class="create" id="create" href="create.php">글쓰기</a>
-            <div class="postImg_box">
+            <div class="postImg_box" id="postImg_box">
                 <?=$list;?>
             </div>
         </div>
@@ -46,11 +55,17 @@ if(isset($_GET['id'])) {
                 <?=$delete_link?>
             </div>
             <div>
+                <?=$post_inner_img?>
                 <h2><?=$article['title']?></h2>
                 <?=$article['description']?>
                 <?=$author?>
+                <?=$date?>
             </div>
         </div>
+        <form method="post" action="" enctype="multipart/form-data">
+            <input type="file" name="uploadfile" value=""/>
+            <button type="submit" name="upload">업로드</button>
+        </form>
 
 <?php
     require_once('./view/bottom.php');

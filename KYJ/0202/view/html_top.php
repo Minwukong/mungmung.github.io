@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/main_head.css">
     <link rel="stylesheet" href="./css/main_slide.css">
-    <link rel="stylesheet" href="./css/main_post.css">
+    <link rel="stylesheet" href="./css/main_post.css?ver=1">
     <script src="js/jquery-3.5.1.min.js"></script>
 </head>
 <body>

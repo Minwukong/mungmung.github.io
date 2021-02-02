@@ -12,8 +12,8 @@ require_once('./view/php_connect_root.php');
 $sql = "
     UPDATE topic
         SET
-            title = '{$filtered['title']}',
-            description = '{$filtered['description']}'
+            title = {$filtered['title']},
+            description = {$filtered['description']}
         WHERE
             id = {$filtered['id']}
 ";
