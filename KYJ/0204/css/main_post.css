@@ -15,6 +15,8 @@ li{
 }
 .main_title{
     display: block;
+    width: 100px;
+    margin: 0 auto;
 }
 .post_box{
     display: block;
@@ -54,13 +56,6 @@ li{
     margin: 0 5px 10px 5px;
     overflow: hidden;
     vertical-align: middle;
-}
-.list_ul{
-    display: inline-block;
-    padding: 0 30vw 0 0;
-}
-.date_ul{
-    display: inline-block;
 }
 
 /* 글 박스 */
@@ -120,14 +115,49 @@ li{
     /* border: 1px dotted #333; */
     transform: translateY(-1%);
 }
+.post_wrapper{
+    display: block;
+    width: 520px;
+    margin: 0 auto;
+    /* text-indent: 10px; */
+    padding: 50px 10px 50px;
+    border: 1px solid black;
+}
+.post_section{
+    display: block;
+    padding-left: 20px;
+    text-align: left;
+}
 .post_innerImg{
     width: 500px;
 }
 .show_img{
     width: 500px;
 }
+.react_box{
+    display: block;
+    padding-top: 15px;
+    /* text-align: left; */
+}
+.reacts{
+    width : 24px;
+    height: 24px;
+    display: inline-block;
+    margin-right: 15px;
+}
+.reacts:last-child{
+    margin-left: 325px;
+    margin-right: 0;
+}
+/* .heart{
+    fill: rgb(237, 73, 86);
+} */
+.post_date{
+    color: grey;
+}
+
 /* c,r,u */
-.cru_box p{
+.show_box p, .cru_box p{
     padding-top: 1vw;
 }
 .title_box, .description_box{

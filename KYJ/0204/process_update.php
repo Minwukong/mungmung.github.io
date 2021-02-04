@@ -9,12 +9,14 @@ $filtered = array(
     'description' => mysqli_real_escape_string($conn, $_POST['description'])
 );
 
-$filename = $_FILES["uploadfile"]["name"];
 $tempname = $_FILES["uploadfile"]["tmp_name"];
-$folder = "./designSource/kyj/" . $filename;
 $show_img = '';
 $msg = '';
+$sql = '';
 if(is_uploaded_file($tempname)){
+    $filename = $_FILES["uploadfile"]["name"];
+    $folder = "./designSource/kyj/" . $filename;
+
     if (move_uploaded_file($tempname, $folder)) {
         $msg = "이미지가 성공적으로 수정되었습니다.<br>";
         $show_img = "<img class=\"show_img\" src=\"$folder\">";
@@ -22,9 +24,8 @@ if(is_uploaded_file($tempname)){
         $msg = "이미지 수정에 실패하였습니다.<br>";
         error_log(mysqli_error($conn));
     }
-}
 
-$sql = "
+    $sql = "
     UPDATE topic
         SET
             title = '{$filtered['title']}',
@@ -32,7 +33,27 @@ $sql = "
             img_test = '$folder'
         WHERE
             id = {$filtered['id']}
-";
+    ";
+} else {
+    $sql = "
+    UPDATE topic
+        SET
+            title = '{$filtered['title']}',
+            description = '{$filtered['description']}'
+        WHERE
+            id = {$filtered['id']}
+    ";
+}
+
+// $sql = "
+//     UPDATE topic
+//         SET
+//             title = '{$filtered['title']}',
+//             description = '{$filtered['description']}',
+//             img_test = '$folder'
+//         WHERE
+//             id = {$filtered['id']}
+// ";
 
 $result = mysqli_query($conn, $sql);
 if($result === false){
