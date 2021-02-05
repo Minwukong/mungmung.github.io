@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+/* 회원가입 */
+.step { display: flex; border-top: 1px solid #aaa; border-bottom: 1px solid #aaa;}
+
+.step li { flex: 1; position: relative; padding: 22px 0; font-size: 11px; color:#a5a5a5; text-align: center; line-height: 100%;}
+.step li:after { content: ""; position: absolute; right: 0; top: 50%; width: 12px; height: 19px; transform: translate(-50%, -50%); background: url("../designSource/ico/icon.png") no-repeat -304px -58px;}
+.step li:last-child:after { display: none;}
+.step li div { padding: 8px 0 0; font-size: 18px; color:#a5a5a5;}
+.step li.on { color:#222;}
+.step li.on div { color:#ee7606;}
+
+.agree_box { overflow: auto; margin: 0 0 28px; padding: 35px 30px; height: 152px; border-top: 2px solid #042e6f; border-bottom: 1px solid #999;}
+.agree_box h4 { padding: 0 0 12px; font-size: 17px; color:#222; line-height: 100%; font-weight: normal;}
+.agree_box h5 { padding: 15px 0 8px; font-size: 14px; color:#222; font-weight: normal; line-height: 100%;}
+.agree_box p { line-height: 26px; font-size: 14px; color:#777;}
+.agree_box p + h4,
+.agree_box ul + h4 { padding-top: 30px; }
+.agree_box ol + h4 { padding-top: 35px; }
+.agree_box li { font-size: 14px; color:#777; line-height: 26px;}
+.agree_box > ul > li:before { content: ""; display: inline-block; margin: 0 7px 0 0; width: 2px; height: 2px; background: #888; vertical-align:middle;}
+.agree_box > ul > li ul { padding: 0 0 0 9px;}
+.agree_box > ol > li ol { padding: 0 0 0 12px;}
+.agree_box.ovn { overflow: visible; height: auto;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
