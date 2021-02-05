@@ -10,7 +10,6 @@ $delete_link = '';
 $author = '';
 $date = '';
 $post_inner_img = '';
-$temp = isset($_GET['id']);
 if (isset($_GET['id'])) {
     $filtered_id = mysqli_real_escape_string($conn, $_GET['id']);
     $sql = "SELECT * FROM topic LEFT JOIN member ON topic.author_id = member.id WHERE topic.id={$filtered_id}";
@@ -20,6 +19,7 @@ if (isset($_GET['id'])) {
     $article['description'] = htmlspecialchars($row['description']);
     $article['name'] = htmlspecialchars($row['name']);
     $article['created'] = htmlspecialchars($row['created']);
+    $article['author_id'] = htmlspecialchars($row['author_id']);
 
     $update_link = '<a class="update_link" href="update.php?id=' . $_GET['id'] . '">수정</a>';
     $delete_link = '
@@ -29,6 +29,7 @@ if (isset($_GET['id'])) {
     </form>
     ';
     $author = $article['name'];
+    $author_id = $article['author_id'];
     $date = $article['created'];
 
     if (($row['img_test'])) {
@@ -43,16 +44,26 @@ require_once('./view/html_slide.php');
 <div id="Wrap" class="wrap_posts">
     <h1><a class="main_title" href="index.php">게시판</a></h1>
     <div class="post_box">
+        <!-- 로그인해야 글쓰기 가능 -->
+    <?php if(isset($_SESSION['id'])){ ?>
         <a class="create" id="create" href="create.php">글쓰기</a>
+    <?php } ?>
         <div class="postImg_box" id="postImg_box">
             <?= $list; ?>
         </div>
     </div>
     <div class="show_box">
+        <!-- id 일치해야 수정/삭제 가능 -->
+    <?php if(isset($_SESSION['id'])){ 
+            if($_SESSION['id'] == $row['author_id']){
+    ?>
         <div class="update_delete">
             <?= $update_link ?>
             <?= $delete_link ?>
         </div>
+    <?php } 
+        } ?>    
+        <!-- 게시글 누르기 전/후 -->
     <?php if (!isset($_GET['id'])) { ?>
         <div class="welcome" id="welcome">
             <p><h2>환영합니다.</h2></p>

@@ -1,6 +1,6 @@
 <?php
-// require_once('./view/php_connect_root.php');
-require_once('./view/php_connect_h.php');
+require_once('./view/php_connect_root.php');
+// require_once('./view/php_connect_h.php');
 
 $filtered = array(
     'title' => mysqli_real_escape_string($conn, $_POST['title']),

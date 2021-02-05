@@ -51,13 +51,35 @@ li{
 }
 .postImg_wrapper{
     display: inline-block;
+    position: relative;
     width: 120px;
     height: 120px;
     margin: 0 5px 10px 5px;
     overflow: hidden;
     vertical-align: middle;
 }
-
+.postImg_wrapper:hover{
+    transform: scale(1.05);
+}
+.darkness{
+    position: absolute;
+    background:#000;
+    top: 0;
+    left: 0;
+    width: 120px;
+    height: 120px;
+    opacity: 0;
+    transition: all .4s ease-in;
+    text-align:center;
+    line-height: 120px;
+}
+.postImg_wrapper:hover .darkness{
+    opacity: 0.4;
+}
+.postImg_wrapper:hover .darkness p{
+    color: white;
+    opacity: 1;
+}
 /* 글 박스 */
 .show_box{
     display: block;
@@ -119,7 +141,6 @@ li{
     /* display: block; */
     width: 520px;
     margin: 0 auto;
-    /* text-indent: 10px; */
     padding: 50px 10px 50px;
     border: 1px solid black;
 }
