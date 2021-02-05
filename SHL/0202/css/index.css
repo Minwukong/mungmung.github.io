@@ -1,0 +1,84 @@
+@charset "utf-8";
+
+
+.info_box { width: 1175px; margin: 0 auto;}
+.info_box h2 { padding: 58px 0 41px; font-size: 21px; color:#777; font-weight: normal; text-align: center; letter-spacing: 36px;}
+.info_box h2 span { color:#042e6f;}
+.info_box li { float: left; margin: 0 0 0 45px; width: 260px; position: relative;}
+.info_box li:first-child { margin: 0;}
+.info_box li em { overflow: hidden; display: block; width:100%; height: 170px;}
+.info_box li img { width:100%; height: 170px; transform: scale(1); transition: all 0.3s;}
+.info_box li:hover img { transform: scale(1.1);}
+.info_box li a > div { padding:40px 20px 0px; height: 170px; transition: all 0.3s;
+
+	background: url(../images/sales_obj01.png) no-repeat -260px -240px,
+				url(../images/sales_obj02.png) no-repeat -309px 180px,
+				url(../images/sales_obj03.png) no-repeat 204px 210px;
+}
+.info_box li:hover a > div  {
+	background-position: -180px -160px, -229px 120px, 104px 130px;
+	background-color: #aaa8aa;
+}
+.info_box li:hover a * { transition: all 0.5s;}
+.info_box li:hover a * { color:#fff;}
+
+.info_box li a h3 { font-size: 19px; color:#222; font-weight: normal; line-height: 28px;}
+.info_box li a p { padding: 13px 0 0; font-size: 13px; color:#747774; line-height: 18px;}
+.info_box li a > div div { position: absolute; left:20px; bottom: 0; width:220px; height: 54px; line-height: 54px; border-top: 1px solid #ccc; text-align: right; font-size: 13px; color: #666;}
+.info_box li a > div div:after { content: ""; display: inline-block; margin:0 0 0 6px; width: 22px; height: 12px; background: url(../images/icon.png) no-repeat -60px -25px; transition: all 0.5s;}
+.info_box li:hover a > div div:after { background-position: -60px -5px;}
+.info_box li a .ico { position: absolute; left: 20px; top: 137px; width:65px; height:65px; color:#fff; text-align: center; line-height: 65px; font-size: 13px;}
+.info_box li a .ico.no1 { background: #94c83d;}
+.info_box li a .ico.no2 { background: #042e6f;}
+.info_box > ul + * { padding-top: 30px;}
+.btn_more { display: inline-block;width: 140px; height: 44px; border:1px solid #042e6f; box-sizing: border-box; font-size: 16px; color:#042e6f; line-height: 44px; text-align: center; letter-spacing: 7px;}
+.btn_more:after { content: ""; display: inline-block; margin: 0 0 0 8px; width:12px; height:12px; background: url(../images/icon.png) no-repeat -196px -5px;}
+.btns.center { text-align: center;}
+
+.guide_box { width:1175px; margin:60px auto 55px;}
+.guide_box article { float: left;}
+.guide_box .guide h2 { float: left; padding: 0 43px 0 0; color:#000; font-size:30px; line-height: 40px; font-weight: normal;}
+.guide_box .guide ul { float: left;}
+.guide_box .guide ul li { float: left; padding: 0 50px 0 0;}
+.guide_box .guide ul li a { display: inline-block; padding: 70px 0 0; text-align: center; font-size: 15px; color:#002870;}
+.guide_box .guide ul li:nth-child(1) a { background: url(../images/ico_main_util01.png) no-repeat top;}
+.guide_box .guide ul li:nth-child(2) a { background: url(../images/ico_main_util02.png) no-repeat top; width: 56px;}
+.guide_box .guide ul li:nth-child(3) a { background: url(../images/ico_main_util03.png) no-repeat top;}
+.guide_box .guide ul li:nth-child(4) a { background: url(../images/ico_main_util04.png) no-repeat top;}
+.guide_box .phone { position: relative;padding: 0 0 0 55px;}
+.guide_box .phone:after { content: ""; position: absolute; left: 0; top: 0; width: 1px; height: 80px; background: #666;}
+.guide_box .phone h2 { font-size: 15px; color:#777; font-weight: normal;}
+.guide_box .phone > div { float: left;}
+.guide_box .phone > div:first-child span { font-size: 25px; color:#042e6f;}
+.guide_box .phone > div:last-child { position: relative; top: 3px; padding: 0 0 0 55px; font-size: 15px; color:#777; font-weight: normal; line-height: 100%;}
+.guide_box .phone > div:last-child h2,
+.guide_box .phone > div:last-child p { float: left;}
+.guide_box .phone > div:last-child p { padding: 0 0 0 25px;}
+.guide_box .phone > div:last-child div { clear: both; padding: 15px 0 0;}
+
+.news { background: #f4f5f9;}
+.news > div { width:1175px; padding: 50px 0; margin: 0 auto;}
+.news h2 { float: left;width: 95px; height: 95px; background: #042e6f; color:#fff; line-height: 95px; text-align: center; font-size: 14px; font-weight: normal;}
+.news ul { float: left; padding: 0 0 0 15px;}
+.news li { float: left; padding:0 0 0 45px;}
+.news li a { display: block; position: relative; padding: 35px 30px 0; width: 310px; height: 260px; background: #fff; box-sizing: border-box;}
+.news li a h3 { font-size: 24px; color:#222; font-weight: normal; line-height: 36px;}
+.news li a p { padding: 22px 0 20px; font-size: 14px; color:#666;}
+.news li a span { font-size:12px; color:#666;}
+.news li a em { position: absolute; background: rgba(96,96,96,0); transition: all 0.5s;}
+.news li a em:nth-of-type(1) { left: 0; top: 0; width: 0%; height: 1px;}
+.news li a em:nth-of-type(2) { left: 0; top: 0; width: 1px; height: 0%;}
+.news li a em:nth-of-type(3) { right: 0; bottom: 0; width:1px; height:0%;}
+.news li a em:nth-of-type(4) { right: 0; bottom: 0; width:0%; height:1px;}
+.news li a:hover em {background: rgba(96,96,96,1);}
+.news li a:hover em:nth-of-type(1) {width: 100%;}
+.news li a:hover em:nth-of-type(2) { height: 100%;}
+.news li a:hover em:nth-of-type(3) { height:100%;}
+.news li a:hover em:nth-of-type(4) { width:100%;}
+
+
+
+
+
+
+
