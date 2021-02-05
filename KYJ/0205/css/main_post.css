@@ -1,0 +1,181 @@
+a{
+    text-decoration: none;
+    color: black;
+}
+li{
+    margin: 10px 0;
+    list-style: none;
+}
+/* 게시글들 박스 */
+.wrap_posts{
+    display: block;
+    padding: 200px 3vw 3vw 3vw;
+    /* margin: 200px 50px; */
+    text-align: center;
+}
+.main_title{
+    display: block;
+    width: 100px;
+    margin: 0 auto;
+}
+.post_box{
+    display: block;
+    position: relative;
+    padding: 5vw;
+    /* justify-content: center; */
+}
+.create{
+    position: absolute;
+    right: 5vw;
+    transform: translateY(-130%);
+}
+#create{
+    display: block;
+    color: #fff;
+    background-color: rgb(252, 171, 96);
+    width: 50px;
+    height: 30px;
+    line-height: 30px;
+    padding: 5px 10px 5px;
+    text-align: center;
+    border-radius: 20px;
+}
+.postImg_box{
+    display: block;
+    width: 650px;
+    border: 1px solid rgb(204, 202, 202);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    padding: 10px 5px 0px 5px;
+}
+.postImg_wrapper{
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+    margin: 0 5px 10px 5px;
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+/* 글 박스 */
+.show_box{
+    display: block;
+    position: relative;
+    padding: 5vw;
+}
+.cru_box {
+    width: 50.5vw;
+    border: 1px solid black;
+    /* margin-left: auto;
+    margin-right: auto; */
+    margin: 0 auto;
+    padding: 20px 0 20px 0;
+}
+.update_delete{
+    display: block;
+    position: absolute;
+    right: 5vw;
+    transform: translateY(50%);
+}
+.update_link{
+    display: inline-block;
+    color: #fff;
+    background-color:rgb(241, 214, 189);
+    width: 50px;
+    height: 30px;
+    line-height: 30px;
+    padding: 1px 5px 1px;
+    text-align: center;
+    border-radius: 20px;
+    /* box-sizing: border-box; */
+}
+/* #delete_link{
+    color: #fff;
+    background-color:rgb(117, 115, 113);
+    border: none;
+    font-size: 15px;
+} */
+.delete_link{
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 1px 5px 1px;
+    background-color:rgb(117, 115, 113);
+    border-radius: 20px;
+    transform: translateY(-7%);
+}
+.delete_link_inner{
+    /* box-sizing: border-box; */
+    color: #fff;
+    background-color: transparent;
+    width: 50px;
+    height: 30px;
+    text-align: center;
+    border: none;
+    /* border: 1px dotted #333; */
+    transform: translateY(-1%);
+}
+.post_wrapper{
+    /* display: block; */
+    width: 520px;
+    margin: 0 auto;
+    /* text-indent: 10px; */
+    padding: 50px 10px 50px;
+    border: 1px solid black;
+}
+.post_section{
+    display: block;
+    padding-left: 20px;
+    text-align: left;
+}
+.post_innerImg{
+    width: 500px;
+}
+.show_img{
+    width: 500px;
+}
+.react_box{
+    display: block;
+    padding-top: 15px;
+    /* text-align: left; */
+}
+.reacts{
+    width : 24px;
+    height: 24px;
+    display: inline-block;
+    margin-right: 15px;
+}
+.reacts:last-child{
+    margin-left: 325px;
+    margin-right: 0;
+}
+/* .heart{
+    fill: rgb(237, 73, 86);
+} */
+.post_date{
+    color: grey;
+}
+
+/* c,r,u */
+.show_box p, .cru_box p{
+    padding-top: 1vw;
+}
+.title_box, .description_box{
+    width: 30vw;
+    padding: 5px;
+    margin-left: 10px;
+}
+.submit_btn{
+    width: 50px;
+    padding: 2px 5px 2px 5px;
+    color:#333;
+    background-color: rgb(250, 230, 164);
+    border-radius: 1vw;
+    border: none;
+    margin-top: 20px;
+}
+.show_img{
+    display: block;
+    width: 200px;
+    margin: 10px auto;
+}
