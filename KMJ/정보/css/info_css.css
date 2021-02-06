@@ -140,10 +140,11 @@
 }
 
 .service_header .wrap_inner {
-    margin: 20px 50px 0;
+    margin: px 40px 0;
     text-align: center;
-    width: 2450;
+    width: 1900;
     height: 60;
+    
 }
 .service_header .img_ico {
     background: url(/designSource/ico/Menu_icon_icon-icons.com_71858.svg) no-repeat;
@@ -211,17 +212,18 @@ figure.snip1114 * {
 }
 
 #img_a{
-  top: 450;
+  left: 250;
+  top: 290;
 }
 
 #img_b{
-  left: 1070;
-  top: -100;
+  left: 740;
+  top: -200;
 }
 
 #img_c{
-  left: 1800;
-  top: -200;
+  left: 1230;
+  top: -350;
 }
 figure.snip1114 img {
   max-width: 100%;
@@ -389,7 +391,7 @@ html {
 @import url(https://fonts.googleapis.com/css?family=Muli);
 .nevigation {
   font-family: 'Muli', Arial, sans-serif;
-  font-size: 30px;
+  font-size: 24px;
   letter-spacing: 1.5px;
   line-height: 1em;
   margin: 15px 40px;
