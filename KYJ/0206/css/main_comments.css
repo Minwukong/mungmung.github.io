@@ -1,0 +1,62 @@
+.comments_box{
+    display: block;
+    position: relative;
+    width: 520px;
+    margin: 0 auto;
+
+}
+.comments_view{
+    width: 500px;
+    margin: 0 auto; 
+    margin-top: 50px;
+    word-break: break-all;
+    text-align: left;
+}
+.comments_view h3{
+    margin-bottom: 30px;
+}
+.dat_view{
+    font-size: 14px;
+    padding: 10px 0 15px 0;
+    border-bottom: solid 1px gray;
+}
+.comment_view .dat_view:last-child{
+    border-bottom: none;
+}
+.dat_content{
+    margin-top: 5px;
+}
+.dat_created{
+    display: inline-block;
+    color: rgb(136, 136, 136);
+    margin-top: 2px;
+    font-size: 12px;
+}
+.dat_del{
+    display: inline-block;
+    position: absolute;
+    right: 2vw;
+}
+.dat_del_btn{
+    color: rgb(204, 79, 79);
+}
+.dat_ins{
+    margin-top: 50px;
+}
+/* .dat_edit_t{
+    width: 500px;
+    height: 70px;
+    position: absolute;
+    top: 40px;
+} */
+.comm_con{
+    width: 440px;
+    height: 56px;
+}
+.comm_btn{
+    position: absolute;
+    width: 50px;
+    height: 58px;
+    font-size: 16px;
+    margin-left: 9px;
+}
