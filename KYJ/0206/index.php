@@ -140,7 +140,7 @@ require_once('./view/html_slide.php');
             <div class="dat_view">
                 <div><b><?=$comment['name']?></b></div>
                 <div class="dap_to comt_edit dat_content">
-                    <?=$comment['contents'];?>
+                    <?=$comment['contents']?>
                 </div>
                 <div class="comm_me dap_to dat_created">
                     <?=$comment['created']?>
@@ -155,7 +155,9 @@ require_once('./view/html_slide.php');
                 <form action="./comment/comment_delete.php" method="POST" class="comment_delete_link">
                     <input type="hidden" name="post_num" value=<?=$filtered_id?>>
                     <input type="hidden" name="comment_num" value=<?=$comment['id']?>>
-                    <input class="dat_del_btn" type="submit" value="삭제">
+                    <div class="dat_del">
+                        <input class="dat_del_btn" type="submit" value="삭제">
+                    </div>
                 </form>
                 <?php } 
                 } ?>

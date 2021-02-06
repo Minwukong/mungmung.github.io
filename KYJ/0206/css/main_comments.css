@@ -35,10 +35,13 @@
 .dat_del{
     display: inline-block;
     position: absolute;
+    transform: translateY(-100%);
     right: 2vw;
 }
 .dat_del_btn{
     color: rgb(204, 79, 79);
+    background-color: transparent;
+    border: none;
 }
 .dat_ins{
     margin-top: 50px;
