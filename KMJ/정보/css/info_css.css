@@ -119,7 +119,7 @@
 .f_c{
 	width: 40px;
 	margin: 0 auto;
-	float: none;
+	float: center;
   }
 
 
@@ -142,6 +142,8 @@
 .service_header .wrap_inner {
     margin: 20px 50px 0;
     text-align: center;
+    width: 2450;
+    height: 60;
 }
 .service_header .img_ico {
     background: url(/designSource/ico/Menu_icon_icon-icons.com_71858.svg) no-repeat;
@@ -189,6 +191,7 @@ figure.snip1114 {
   overflow:hidden;
   top: 500;
   left: 400;
+  
   min-width: 250px;
   max-width: 350px;
   max-height: 350px;
@@ -208,17 +211,17 @@ figure.snip1114 * {
 }
 
 #img_a{
-  top: 650;
+  top: 450;
 }
 
 #img_b{
   left: 1070;
-  top: 100;
+  top: -100;
 }
 
 #img_c{
   left: 1800;
-  top: 30;
+  top: -200;
 }
 figure.snip1114 img {
   max-width: 100%;
