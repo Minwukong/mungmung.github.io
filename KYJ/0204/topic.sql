@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- 생성 시간: 21-02-04 02:57
+-- 생성 시간: 21-02-04 16:17
 -- 서버 버전: 8.0.22
 -- PHP 버전: 8.0.1
 
@@ -54,7 +54,8 @@ INSERT INTO `topic` (`id`, `title`, `description`, `created`, `author_id`, `img_
 (20, '고양이', '잘못함', '2021-02-01 16:53:23', 2, './designSource/kyj/cat_eaten.jpg'),
 (22, '강아지고양이', '룰루', '2021-02-01 17:02:17', 1, 'http://iamnothalim.dothome.co.kr/designSource/background.jpg'),
 (58, '토끼', '드디어 토끼', '2021-02-04 01:46:02', 3, './designSource/kyjrabbit1.jpg'),
-(59, '토끼 한마리 더', '몰고 가세용', '2021-02-04 01:46:31', 1, './designSource/kyjrabbit2.jpg');
+(59, '토끼 한마리 더', '몰고 가세용', '2021-02-04 01:46:31', 1, './designSource/kyjrabbit2.jpg'),
+(60, '고슴도치', '수정 테스트', '2021-02-04 21:59:27', 1, './designSource/kyj/hedgehog.jpg');
 
 --
 -- 덤프된 테이블의 인덱스
@@ -74,7 +75,7 @@ ALTER TABLE `topic`
 -- 테이블의 AUTO_INCREMENT `topic`
 --
 ALTER TABLE `topic`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

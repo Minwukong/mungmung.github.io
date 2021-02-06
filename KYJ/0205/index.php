@@ -12,13 +12,14 @@ $date = '';
 $post_inner_img = '';
 if (isset($_GET['id'])) {
     $filtered_id = mysqli_real_escape_string($conn, $_GET['id']);
-    $sql = "SELECT * FROM topic LEFT JOIN author ON topic.author_id = author.id WHERE topic.id={$filtered_id}";
-    $result = mysqli_query($conn, $sql);
+    $sql = "SELECT * FROM topic LEFT JOIN member ON topic.author_id = member.id WHERE topic.id={$filtered_id}";
+    $result = mysqli_query($conn, $sql) or die(mysqli_error($conn));
     $row = mysqli_fetch_array($result);
     $article['title'] = htmlspecialchars($row['title']);
     $article['description'] = htmlspecialchars($row['description']);
     $article['name'] = htmlspecialchars($row['name']);
     $article['created'] = htmlspecialchars($row['created']);
+    $article['author_id'] = htmlspecialchars($row['author_id']);
 
     $update_link = '<a class="update_link" href="update.php?id=' . $_GET['id'] . '">수정</a>';
     $delete_link = '
@@ -28,13 +29,13 @@ if (isset($_GET['id'])) {
     </form>
     ';
     $author = $article['name'];
+    $author_id = $article['author_id'];
     $date = $article['created'];
 
     if (($row['img_test'])) {
         $post_inner_img = "<p><img class=\"post_innerImg\" src=\"{$row['img_test']}\"></p>";
     }
 }
-
 
 require_once('./view/html_top.php');
 require_once('./view/html_slide.php');
@@ -43,17 +44,33 @@ require_once('./view/html_slide.php');
 <div id="Wrap" class="wrap_posts">
     <h1><a class="main_title" href="index.php">게시판</a></h1>
     <div class="post_box">
+        <!-- 로그인해야 글쓰기 가능 -->
+    <?php if(isset($_SESSION['id'])){ ?>
         <a class="create" id="create" href="create.php">글쓰기</a>
+    <?php } ?>
         <div class="postImg_box" id="postImg_box">
             <?= $list; ?>
         </div>
     </div>
     <div class="show_box">
+        <!-- id 일치해야 수정/삭제 가능 -->
+    <?php if(isset($_SESSION['id'])){ 
+            if($_SESSION['id'] == $row['author_id']){
+    ?>
         <div class="update_delete">
             <?= $update_link ?>
             <?= $delete_link ?>
         </div>
-        <div class="post_wrapper">
+    <?php } 
+        } ?>    
+        <!-- 게시글 누르기 전/후 -->
+    <?php if (!isset($_GET['id'])) { ?>
+        <div class="welcome" id="welcome">
+            <p><h2>환영합니다.</h2></p>
+            <p>글을 둘러보거나 작성할 수 있습니다.</p>
+        </div>
+    <?php } else { ?>
+        <div class="post_wrapper" id="post_wrapper">
             <div class="post_section">
                 <p><h2><?= $article['title'] ?></h2></p>
                 <p><?=$author?></p>
@@ -79,6 +96,7 @@ require_once('./view/html_slide.php');
                 <p class="post_date"><?= $date ?></p>
             </div>
         </div>
+    <?php } ?>
     </div>
     <?php
     require_once('./view/bottom.php');
