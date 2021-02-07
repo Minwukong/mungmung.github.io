@@ -4,51 +4,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>강아지 정보</title>
     <link rel="stylesheet" href="/KMJ/정보/info_css.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.js" type="text/javascript"></script>
 </head>
 <body>
     <p>강아지 정보</p> <br><br>
 
     <a href="/KMJ/정보/index.html">메뉴로 이동</a>
-
+    
+    <button onclick="training_button()">훈련</button>
+    <a href="/KMJ/정보/puppyInfo.html"><button>사료</button></a>
+    
     <table class="tg">
+
+      
         <thead>
           <tr>
-            <th class="tg-visl">이미지</th>
-            <th class="tg-visl">사료</th>
-            <th class="tg-visl">대상</th>
-            <th class="tg-visl">판매가</th>
+            <th class="tg-visl" ><p id="table_a">이미지</p></th>
+            <th class="tg-visl" ><p id="table_b">사료</p></th>
+            <th class="tg-visl" ><p id="table_c">대상</p></th>
+            <th class="tg-visl" ><p id="table_d">판매가</p></th>
             
         </thead>
         <tbody>
           <tr>
-            <td class="tg-5e02"><a href="https://www.ginipet.co.kr:444/prod/selProdView.do?CATEGORY_ID=C00002&amp;PROD_CODE=202101140001"><img src="https://www.ginipet.co.kr:444/images/prod/2021/01/600/161060689216800.jpg" alt="Image" width="150" height="150"></a><br></td>
-            <td class="tg-ybzk">[전견종/2개월령이상]<br>홍삼함유 기본식 6kg+<br>더케어 장건강/북어농축액분말</td>
-            <td class="tg-ybzk">강아지<br>(전견종)</td>
-            <td class="tg-ybzk">126,000</td>
+            <td id="trA_a" class="tg-ybzk"><a class="img"  href="https://www.ginipet.co.kr:444/prod/selProdView.do?CATEGORY_ID=C00002&amp;PROD_CODE=202101140001"><img src="https://www.ginipet.co.kr:444/images/prod/2021/01/600/161060689216800.jpg" alt="Image" width="150" height="150"></a><br></td>
+            <td id="trA_b" class="tg-ybzk">[전견종/2개월령이상]<br>홍삼함유 기본식 6kg+<br>더케어 장건강/북어농축액분말</td>
+            <td id="trA_c" class="tg-ybzk">강아지<br>(전견종)</td>
+            <td id="trA_d" class="tg-ybzk">126,000</td>
             
           </tr>
           <tr>
-            <td class="tg-ybzk"><a href="https://www.ginipet.co.kr:444/prod/selProdView.do?CATEGORY_ID=C00002&amp;PROD_CODE=202101140002"><img src="https://www.ginipet.co.kr:444/images/prod/2021/01/600/161060690858100.jpg" alt="Image" width="150" height="150"></a></td>
-            <td class="tg-ybzk">[전견종/2개월령이상]<br>홍삼함유 아로니아 6kg+<br>더케어 눈건강/피부건강</td>
-            <td class="tg-ybzk">강아지<br>(전견종)</td>
-            <td class="tg-ybzk">131,000</td>
+            <td id="trB_a" class="tg-ybzk"><a class="img" href="https://www.ginipet.co.kr:444/prod/selProdView.do?CATEGORY_ID=C00002&amp;PROD_CODE=202101140002"><img src="https://www.ginipet.co.kr:444/images/prod/2021/01/600/161060690858100.jpg" alt="Image" width="150" height="150"></a></td>
+            <td id="trB_b" class="tg-ybzk">[전견종/2개월령이상]<br>홍삼함유 아로니아 6kg+<br>더케어 눈건강/피부건강</td>
+            <td id="trB_c" class="tg-ybzk">강아지<br>(전견종)</td>
+            <td id="trB_d" class="tg-ybzk">131,000</td>
            
           </tr>
           <tr>
-            <td class="tg-ybzk"><a href="https://www.ginipet.co.kr:444/prod/selProdView.do?CATEGORY_ID=C00008&amp;PROD_CODE=202101140010"><img src="https://www.ginipet.co.kr:444/images/prod/2021/01/600/161062047890400.jpg" alt="Image" width="150" height="150"></a></td>
-            <td class="tg-ybzk">[전견종/2개월령이상]<br> 홀리스틱 홍삼&amp;<br>신선한연어 5.2kg</td>
-            <td class="tg-ybzk">강아지<br>(전견종)</td>
-            <td class="tg-ybzk">69,000</td>
+            <td id="trC_a" class="tg-ybzk"><a class="img" href="https://www.ginipet.co.kr:444/prod/selProdView.do?CATEGORY_ID=C00008&amp;PROD_CODE=202101140010"><img src="https://www.ginipet.co.kr:444/images/prod/2021/01/600/161062047890400.jpg" alt="Image" width="150" height="150"></a></td>
+            <td id="trC_b" class="tg-ybzk">[전견종/2개월령이상]<br> 홀리스틱 홍삼&amp;<br>신선한연어 5.2kg</td>
+            <td id="trC_c" class="tg-ybzk">강아지<br>(전견종)</td>
+            <td id="trC_d" class="tg-ybzk">69,000</td>
            
           </tr>
           <tr>
-            <td class="tg-ybzk"><a href="https://www.ginipet.co.kr:444/prod/selProdView.do?CATEGORY_ID=C00027&amp;PROD_CODE=202012310001"><img src="https://www.ginipet.co.kr:444/images/prod/2020/12/600/160931409360600.jpg" alt="Image" width="150" height="150"></a></td>
-            <td class="tg-ybzk">[전연령/전견종] [밸런스업]<br>연어&amp;흰살생선<br>WITH홍삼 1kg(200g*5포)</td>
-            <td class="tg-ybzk">강아지<br>(전견종)</td>
-            <td class="tg-ybzk">20,000</td>
+            <td id="trD_a" class="tg-ybzk"><a class="img" href="https://www.ginipet.co.kr:444/prod/selProdView.do?CATEGORY_ID=C00027&amp;PROD_CODE=202012310001"><img src="https://www.ginipet.co.kr:444/images/prod/2020/12/600/160931409360600.jpg" alt="Image" width="150" height="150"></a></td>
+            <td id="trD_b" class="tg-ybzk">[전연령/전견종] [밸런스업]<br>연어&amp;흰살생선<br>WITH홍삼 1kg(200g*5포)</td>
+            <td id="trD_c" class="tg-ybzk">강아지<br>(전견종)</td>
+            <td id="trD_d" class="tg-ybzk">20,000</td>
             
           </tr>
         </tbody>
         </table>
+
+        <script src="/KMJ/정보/info_script.js"></script>
 </body>
 </html>
