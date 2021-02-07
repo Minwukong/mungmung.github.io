@@ -1,6 +1,6 @@
 <?php
-require_once("../view/php_connect_root.php");
-// require_once("../view/php_connect_h.php");
+// require_once("../view/php_connect_root.php");
+require_once("../view/php_connect_h.php");
 session_start();
 
 settype($_POST['comment_num'], 'integer');
@@ -19,6 +19,6 @@ if($result === false){
     error_log(mysqli_error($conn));
 } else {
     // echo 'db 저장에 성공했습니다.';
-    echo "<script>location.href='/index.php?id=".$filtered['post_num']."';</script>";
+    echo "<script>location.href='/php_post.php?id=".$filtered['post_num']."';</script>";
 }
 ?>

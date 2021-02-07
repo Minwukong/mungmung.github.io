@@ -5,38 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>멍냥펀치</title>
     <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/main_head.css">
+    <link rel="stylesheet" href="./css/main_header.css">
     <link rel="stylesheet" href="./css/main_slide.css">
     <link rel="stylesheet" href="./css/main_post.css?ver=1">
     <link rel="stylesheet" href="./css/main_comments.css">
     <script src="js/jquery-3.5.1.min.js"></script>
 </head>
 <body>
-    <div id="Wrap" class="wrap_punch">
-        <header id="Head">
-            <div class="service_header top">
-                <div class="wrap_inner">
-                    <div class="f_l">
-                        <button id="btnServiceMenu" type="button" class="f_l text_hide btn_menu img_ico">메뉴</button>
-                    </div>
-                    <div class="f_c">
-                        <img src="designSource/logo2/logo_transparent_cut.png" style="height: 80px; width: 80px;">
-                    </div>
-                    <div class="f_r">
+        <header>
+        <h1><a href="index.php"><img src="/designSource/images/logo_transparent_white.png"> 멍냥펀치</a></h1>
+        <h2 class="hide">대메뉴</h2>
+        <nav class="lnb">
+            <ul>
+            <li><a href="index.php"><span>메인홈</span></a></li>
+            <li><a href="php_post.php"><span>게시판</span></a></li>
+            <li><a href="#a"><span>병원지도</span></a></li>
+            <li><a href="#a"><span>정보</span></a></li>
+            </ul>
+        </nav>
+        <h2 class="hide">관련서비스</h2>
+        <nav class="spot">
+            <ul>
 <?php
                     if(isset($_SESSION['id'])){
 ?>
-                        <!-- <a href="login.html" class="f_r btn_request btn_default">로그인</a> -->
-                        <button class="f_r btn_request btn_default" onclick="logout()">로그아웃</button>
+            <button class="logout" onclick="logout()">로그아웃</button>
 <?php
                     }else{
 ?>
-                        <a href="login.html" class="f_r btn_request btn_default">로그인</a>
+            <li><a href="login.html">로그인</a></li>
+            <li><a href="register.html">회원가입</a></li>
 <?php
                     }
 ?>
-                    </div>
-                </div>
-            </div>
-            <div class="wrapSideMenu"></div>
-        </header>
+            </ul>
+        </nav>
+    </header>

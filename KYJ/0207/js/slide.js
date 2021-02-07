@@ -1,90 +1,59 @@
+
 $(function(){
-    let container = $('.slideshow'),
-        slideGroup = container.find('.slideshow_slides'),
-        slides = slideGroup.find('a'),
-        nav = container.find('.slideshow_nav'),
-        indicator = container.find('.indicator'),
-        slideCount = slides.length,
-        indicatorHtml = '',
-        currentIndex = 0,
-        duration = 500,
-        easing = 'easeInOutExpo',
-        interval = 3500,
-        timer;
+    let $slider = $('.slideshow_slides'),
+        $firstSlide = $slider.find('li').first() // 첫번째 슬라이드
+    .stop(true).animate({'opacity':1},200); // 첫번째 슬라이드만 보이게 하기
 
-        //슬라이드를 가로로 배열
-        //slides마다 할 일, left 0%, 100% 200% 300%
-        console.log(slides);
-        slides.each(function(i){
-            let newLeft = i * 100 + '%';
-            $(this).css({left: newLeft});
-            //<a href=' '>1</a>
-            indicatorHtml += '<a href = "">'+(i+1)+'</a>';
-        });//slides.each
-        indicator.html(indicatorHtml);
-        
-        //슬라이드 이동 함수
-        function goToSlide(index){
-            slideGroup.animate({left:-100*index + '%'},duration);
-            currentIndex = index;
-            updateNav();
-        };
+    function PrevSlide(){ // 이전버튼 함수
+        let $lastSlide = $slider.find('li').last() //마지막 슬라이드
+        .prependTo($slider); //마지막 슬라이드를 맨 앞으로 보내기  
+        $secondSlide = $slider.find('li').eq(1)
+     //두 번째 슬라이드 구하기
+        .stop(true).animate({'opacity':0},400); //밀려난 두 번째 슬라이드는 fadeOut 시키고
+        $firstSlide = $slider.find('li').first() //맨 처음 슬라이드 다시 구하기
+        .stop(true).animate({'opacity':1},400);
+      //새로 들어온 첫 번째 슬라이드는 fadeIn 시키기
+    }
+    function NextSlide(){ // 다음 버튼 함수
+        $firstSlide = $slider.find('li').first() // 첫 번째 슬라이드
+        .appendTo($slider); // 맨 마지막으로 보내기
+        let $lastSlide = $slider.find('li').last() // 맨 마지막으로 보낸 슬라이드
+        .stop(true).animate({'opacity':0},400); // fadeOut시키기
+        $firstSlide = $slider.find('li').first()
+      // 맨 처음 슬라이드
+        .stop(true).animate({'opacity':1},400);
+      // fadeIn 시키기
+    }
 
-        function updateNav(){
-            let navPrev = nav.find('.prev');
-            let navNext = nav.find('.next');
-            if(currentIndex == 0){
-                navPrev.addClass('disabled');
-            }else{
-                navPrev.removeClass('disabled');
-            }
-            if(currentIndex == slideCount - 1){
-                navNext.addClass('disabled');
-            }else{
-                navNext.removeClass('disabled');
-            }
+    //-----------버튼 클릭----------
+    $('.next').on('click', function(e){ //다음버튼 클릭
+      e.preventDefault();
+      NextSlide();
+    });
+    $('.prev').on('click', function(e){ //이전 버튼 클릭하면
+      e.preventDefault();  
+      PrevSlide();
+    });
 
-            
-            //eq(숫자)
-            indicator.find('a').eq(currentIndex).addClass('active').siblings().removeClass('active');
-        };
+    //---------자동 슬라이드--------
+    // let timer;
+    // let container = $('.slideshow');
+    // function startTimer(){
+    //   timer = setInterval(NextSlide, 5000);
+    // }
+    // startTimer();
 
-        //인디케이터로 이동하기
-        indicator.find('a').click(function(e){
-            e.preventDefault();
-            let idx = $(this).index();
-            goToSlide(idx);
+    // function stopTimer(){
+    //   clearInterval(timer);
+    // }
+    
+    // container.mouseenter(function(){
+    //   clearInterval(timer);
+    // })
+    
+    // .mouseleave(function(){
+    //   startTimer();
+    // })
 
-        });
-
-        //좌우 버튼으로 이동하기
-        nav.find('a').click(function(e){
-            e.preventDefault();
-            if($(this).hasClass('prev')){
-                goToSlide(currentIndex - 1);
-            }else{
-                goToSlide(currentIndex + 1);
-            }
-        });
-        updateNav();
-
-        //자동 슬라이드 함수
-        function startTimer(){
-            timer = setInterval(function(){
-                let nextIndex = (currentIndex+1) % slideCount;
-                goToSlide(nextIndex);
-            },interval);
-        }
-        startTimer();
-
-        function stopTimer(){
-            clearInterval(timer);
-        }
-
-        container.mouseenter(function(){
-            stopTimer();
-        })
-        .mouseleave(function(){
-            startTimer();
-        })
+    setInterval(NextSlide, 5000);
 });

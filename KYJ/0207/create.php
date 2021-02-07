@@ -9,10 +9,9 @@ require_once('./view/html_top.php');
     <div class="show_box">
         <div class="cru_box">
             <form action="process_create.php" method="POST" enctype="multipart/form-data">
-                
-                <p>제목<input class="title_box" type="text" name="title" placeholder="제목" autocomplete="off"></p>
-                <p>내용<textarea class="description_box" name="description" placeholder="내용"></textarea></p>
-                <p><input type="file" name="uploadfile" value="" /></p>
+                <p><div class="title_text">제목</div><input class="title_box" type="text" name="title" placeholder="제목" autocomplete="off"></p>
+                <p><div class="desc_text">내용</div><textarea class="description_box" name="description" placeholder="내용"></textarea></p>
+                <p><input type="file" name="uploadfile" class="uploadfile" value="" /></p>
                 <p><input class="submit_btn" type="submit"></p>
             </form>
         </div>

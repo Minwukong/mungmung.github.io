@@ -25,7 +25,7 @@ $result = mysqli_query($conn, $sql);
                 echo '삭제하는 과정에서 문제가 생겼습니다. 관리자에게 문의해주세요.';
                 error_log(mysqli_error($conn));
             } else {
-                echo '삭제에 성공했습니다.<br><br> <a href="index.php">돌아가기</a>';
+                echo '삭제에 성공했습니다.<br><br> <a href="php_post.php">돌아가기</a>';
             }
             ?>
             </div>

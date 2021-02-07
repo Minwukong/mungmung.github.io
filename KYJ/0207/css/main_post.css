@@ -9,7 +9,7 @@ li{
 /* 게시글들 박스 */
 .wrap_posts{
     display: block;
-    padding: 200px 3vw 3vw 3vw;
+    padding: 100px 3vw 3vw 3vw;
     /* margin: 200px 50px; */
     text-align: center;
 }
@@ -33,6 +33,7 @@ li{
     display: block;
     color: #fff;
     background-color: rgb(252, 171, 96);
+    font-size: 14px;
     width: 50px;
     height: 30px;
     line-height: 30px;
@@ -85,6 +86,7 @@ li{
     display: block;
     position: relative;
     padding: 5vw;
+    font-size: 14px;
 }
 .cru_box {
     display: block;
@@ -140,6 +142,7 @@ li{
     transform: translateY(-1%);
     font-size: 16px;
     letter-spacing: 2px;
+    cursor: pointer;
 }
 .post_wrapper{
     /* display: block; */
@@ -152,9 +155,12 @@ li{
     display: block;
     padding-left: 20px;
     text-align: left;
+    margin-bottom: 5px;
 }
+
 .post_innerImg{
     width: 500px;
+    margin-bottom: 10px;
 }
 .show_img{
     width: 500px;
@@ -185,10 +191,23 @@ li{
 .show_box p, .cru_box p{
     padding-top: 1vw;
 }
+.title_text, .desc_text{
+    display: inline-block;
+}
+.desc_text{
+    transform: translateY(-500%);
+}
 .title_box, .description_box{
+    display: inline-block;
     width: 30vw;
     padding: 5px;
     margin-left: 10px;
+}
+.description_box{
+    height: 100px;
+}
+.uploadfile{
+    border: none;
 }
 .submit_btn{
     width: 50px;
@@ -198,6 +217,7 @@ li{
     border-radius: 1vw;
     border: none;
     margin-top: 20px;
+    cursor: pointer;
 }
 .show_img{
     display: block;

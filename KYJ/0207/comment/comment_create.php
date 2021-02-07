@@ -1,6 +1,6 @@
 <?php
-require_once("../view/php_connect_root.php");
-// require_once("../view/php_connect_h.php");
+// require_once("../view/php_connect_root.php");
+require_once("../view/php_connect_h.php");
 
 session_start();
 $userName = '';
@@ -29,7 +29,7 @@ if($result === false){
     error_log(mysqli_error($conn));
 } else {
     // echo 'db 저장에 성공했습니다.';
-    echo "<script>location.href='/index.php?id=".$filtered['id']."';</script>";
+    echo "<script>location.href='/php_post.php?id=".$filtered['id']."';</script>";
 }
 // $msg .= '<br><br> <a href="../index.php?id='.$filtered['id'].'">돌아가기</a><br><br>';
 

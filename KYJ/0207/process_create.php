@@ -41,7 +41,7 @@ if($result === false){
 } else {
     $msg .= 'db 저장에 성공했습니다.';
 }
-$msg .= '<br><br> <a href="index.php">돌아가기</a><br><br>';
+$msg .= '<br><br> <a href="php_post.php">돌아가기</a><br><br>';
 
 require_once('./view/html_top.php');
 ?>
