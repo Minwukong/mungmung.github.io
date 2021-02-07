@@ -1,8 +1,8 @@
 <?php
     header("Content-Type:text/html; charset=UTF-8");
     session_start();
-    // $conn = new mysqli("localhost","iamnothalim","blockchain1!","iamnothalim");
-    require_once('./view/php_connect_root.php');
+    $conn = new mysqli("localhost","iamnothalim","blockchain1!","iamnothalim");
+    // require_once('./view/php_connect_root.php');
     mysqli_query($conn,'SET NAMES utf8');
     $id = $_POST['id'];
     $password = $_POST['password'];

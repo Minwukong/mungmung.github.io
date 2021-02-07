@@ -57,7 +57,7 @@ require_once('./view/html_slide.php');
     <h1><a class="main_title" href="index.php">게시판</a></h1>
     <div class="post_box">
         <!-- 로그인해야 글쓰기 가능 -->
-    <?php if(isset($userId)){ ?>
+    <?php if(isset($_SESSION['id'])){ ?>
         <a class="create" id="create" href="create.php">글쓰기</a>
     <?php } ?>
         <div class="postImg_box" id="postImg_box">
@@ -65,24 +65,24 @@ require_once('./view/html_slide.php');
         </div>
     </div>
     <div class="show_box">
-        <!-- 로그인했고 글 선택했을 때 / id 일치해야 수정, 삭제 가능 -->
-    <?php if(isset($_SESSION['id']) && isset($_GET['id'])){ 
-            if($userId == $row['author_id']){
-    ?>
-        <div class="update_delete">
-            <?= $update_link ?>
-            <?= $delete_link ?>
-        </div>
-    <?php } 
-        } ?>    
-        <!-- 게시글 누르기 전/후 -->
+    <!-- 게시글 누르기 전/후 -->
     <?php if (!isset($_GET['id'])) { ?>
         <div class="welcome" id="welcome">
             <p><h2>환영합니다.</h2></p>
             <p>글을 둘러보거나 작성할 수 있습니다.</p>
         </div>
-    <?php } else { ?>
+    <?php } else { ?>   
         <div class="post_wrapper" id="post_wrapper">
+            <!-- 로그인했고 글 선택했을 때 / id 일치해야 수정, 삭제 가능 -->
+            <?php if(isset($_SESSION['id'])){ 
+                    if($userId == $row['author_id']){
+            ?>
+                <div class="update_delete">
+                    <?= $update_link ?>
+                    <?= $delete_link ?>
+                </div>
+            <?php } 
+            } ?> 
             <div class="post_section">
                 <p><h2><?= $article['title'] ?></h2></p>
                 <p><?=$author?></p>
@@ -164,6 +164,7 @@ require_once('./view/html_slide.php');
     </div>
 <?php } ?>
 </div>
+<script src="./js/slide.js"></script>
     <?php
     require_once('./view/bottom.php');
     ?>

@@ -87,6 +87,7 @@ li{
     padding: 5vw;
 }
 .cru_box {
+    display: block;
     width: 50.5vw;
     border: 1px solid black;
     /* margin-left: auto;
@@ -94,48 +95,51 @@ li{
     margin: 0 auto;
     padding: 20px 0 20px 0;
 }
-.update_delete{
+/* .update_delete{
     display: block;
     position: absolute;
     right: 5vw;
     transform: translateY(50%);
+} */
+.update_delete{
+    display: block;
+    position: absolute;
+    margin-left: 530px;
+    transform: translateY(-40%);
+    border-left: 1px solid black;
 }
 .update_link{
-    display: inline-block;
+    display: block;
     color: #fff;
-    background-color:rgb(241, 214, 189);
+    background-color:rgb(253, 174, 100);
     width: 50px;
-    height: 30px;
-    line-height: 30px;
+    height: 40px;
+    line-height: 40px;
     padding: 1px 5px 1px;
     text-align: center;
-    border-radius: 20px;
-    /* box-sizing: border-box; */
+    margin-bottom: 20px;
+    font-size: 16px;
+    letter-spacing: 2px;
 }
-/* #delete_link{
-    color: #fff;
-    background-color:rgb(117, 115, 113);
-    border: none;
-    font-size: 15px;
-} */
 .delete_link{
     box-sizing: border-box;
-    display: inline-block;
+    display: block;
+    width: 60px;
+    height: 42px;
     padding: 1px 5px 1px;
-    background-color:rgb(117, 115, 113);
-    border-radius: 20px;
-    transform: translateY(-7%);
+    background-color:rgb(172, 172, 172);
 }
 .delete_link_inner{
-    /* box-sizing: border-box; */
     color: #fff;
     background-color: transparent;
     width: 50px;
-    height: 30px;
+    height: 40px;
+    line-height: 40px;
     text-align: center;
     border: none;
-    /* border: 1px dotted #333; */
     transform: translateY(-1%);
+    font-size: 16px;
+    letter-spacing: 2px;
 }
 .post_wrapper{
     /* display: block; */
