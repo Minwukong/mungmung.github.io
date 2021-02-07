@@ -37,14 +37,16 @@
 	<div class="map_wrap">
 		<button onclick="animalHospital()" class="map_button">동물병원</button>
 		<button onclick="park()" class="map_button">공 원</button>
-		<div id="map" style="width:50%;height:190%;position:relative;overflow:hidden;"></div>
+		<div id="map" style="width:50%;height:150%;position:relative;overflow:hidden;"></div>
 	
 		<div id="menu_wrap" class="bg_white">
 			<div class="option">
 				<div>
 					<form onsubmit="searchPlaces(); return false;">
-					 <input type="text" value="부천 동물병원" id="keyword" size="34" placeholder="지역, 위치를 입력하시오"> 
-						<button id="search_button"  type="submit"><img id="search_img" src="/KMJ/images/검색.jpg" alt=""></button> 
+						<input type="text" value="부천 동물병원" id="keyword" size="34" placeholder="지역, 위치를 입력하시오"> 
+						<!-- <div class="searchButton_wrapper"> -->
+							<button id="search_button"  type="submit"><img id="search_img" src="/KMJ/images/magnifying-glass.png" alt=""></button>
+						<!-- </div> -->
 					</form>
 				</div>
 			</div>
