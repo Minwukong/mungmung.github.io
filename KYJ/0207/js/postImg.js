@@ -21,9 +21,9 @@ $(document).ready(function () {
       post_img[i].style.width = "120px";
     }
   }
-  // if (self.name != 'reload') {
-  //   self.name = 'reload';
-  //   self.location.reload();
-  // }
-  // else self.name = ''; 
+  if (self.name != 'reload') {
+    self.name = 'reload';
+    self.location.reload();
+  }
+  else self.name = ''; 
 });

@@ -164,6 +164,7 @@ require_once('./view/html_slide.php');
     </div>
 <?php } ?>
 </div>
+<script type="text/javascript" src="./js/postImg.js?ver=1"></script>
 <script src="./js/slide.js"></script>
     <?php
     require_once('./view/bottom.php');
