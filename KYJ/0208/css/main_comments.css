@@ -3,12 +3,12 @@
     position: relative;
     width: 520px;
     margin: 0 auto;
-
 }
 .comments_view{
     width: 500px;
     margin: 0 auto; 
-    margin-top: 50px;
+    margin-top: 30px;
+    margin-bottom: 50px;
     word-break: break-all;
     text-align: left;
 }

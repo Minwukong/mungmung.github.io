@@ -1,6 +1,6 @@
 .wrap_posts a{
     text-decoration: none;
-    color: black;
+    /* color: black; */
 }
 .wrap_posts li{
     margin: 10px 0;
@@ -12,6 +12,7 @@
     padding: 100px 3vw 3vw 3vw;
     /* margin: 200px 50px; */
     text-align: center;
+    margin-bottom: 50px;
 }
 .main_title{
     display: block;
@@ -87,6 +88,10 @@
     position: relative;
     padding: 5vw;
     font-size: 14px;
+}
+.welcome{
+    margin-top: -50px;
+    margin-bottom: 50px;
 }
 .cru_box {
     display: block;
@@ -176,7 +181,7 @@
     display: inline-block;
     margin-right: 15px;
 }
-.reacts:last-child{
+.mark{
     margin-left: 325px;
     margin-right: 0;
 }
