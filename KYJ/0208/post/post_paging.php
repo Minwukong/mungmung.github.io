@@ -1,5 +1,8 @@
 <?php
 require_once('config.php');
+$sql = "SELECT * FROM topic";
+$result = mysqli_query($conn, $sql);
+$list = '';
 
 $page = isset($_GET['page']) ? $_GET['page'] : 1;
 $sql1 = "SELECT * from topic";

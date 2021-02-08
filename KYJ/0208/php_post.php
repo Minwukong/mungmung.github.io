@@ -1,7 +1,5 @@
 <?php
 require_once('config.php');
-// session_start();
-require_once('./view/php_top.php');
 require_once('./post/post_paging.php');
 $article = array(
     'title' => '환영합니다.',
