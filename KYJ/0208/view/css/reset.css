@@ -1,0 +1,20 @@
+@charset "utf-8";
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
+/* Reset */
+html,body,h1,h2,div,p,ul,li,nav,section,figure {margin:0;padding:0;}
+html, body{width:100%;}
+html{-webkit-touch-callout:none;  -webkit-tap-highlight-color:rgba(0, 0, 0, 0);}
+body{width:100%; background:#fff; min-width:320px; -webkit-text-size-adjust:none;word-wrap:break-word;word-break:break-all;}
+body {border:none;font-size:12px; font-family:'Lato', sans-serif;}
+ul,li{list-style:none;}
+/* img{border:0;} */
+img{vertical-align:middle;}
+img,button{border:none;}
+main,header,section,nav,footer,aside,article,figure{display:block;}
+a{color:#000;text-decoration:none;}
+ * {outline:0  !important;-webkit-tap-highlight-color:rgba(0,0,0,0) !important;}
+a:link,a:hover,a:active{text-decoration:none;}
+footer {text-align:center;}
+.hide { position: absolute; left: -5000px;}
+textarea, input{border: 1px solid #c2c2c2; font-family: inherit;}
