@@ -16,7 +16,7 @@ if($result === false){
     echo 'db 저장에 문제가 생겼습니다. 관리자에게 문의해주세요.';
     error_log(mysqli_error($conn));
 } else {
-    // echo 'db 저장에 성공했습니다.';
+    echo "<script>alert('댓글이 삭제되었습니다.');</script>";
     echo "<script>location.href='/php_post.php?id=".$filtered['post_num']."';</script>";
 }
 ?>

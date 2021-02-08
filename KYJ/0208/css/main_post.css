@@ -181,6 +181,19 @@
     display: inline-block;
     margin-right: 15px;
 }
+/* -----------좋아요------------- */
+/* .react_box button{
+    background-color: #fff;
+} */
+.heart{
+    background-color: transparent;
+}
+.reacts svg{
+    cursor: pointer;
+}
+
+
+/* -----------좋아요-------------- */
 .mark{
     margin-left: 325px;
     margin-right: 0;
