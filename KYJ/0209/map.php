@@ -21,7 +21,7 @@
             <ul>
             <li><a href="index.php"><span>메인홈</span></a></li>
             <li><a href="php_post.php"><span>게시판</span></a></li>
-            <li><a href="map.php"><span>병원지도</span></a></li>
+            <li><a href="map.php"><span>지도</span></a></li>
             <li><a href="info.php"><span>정보</span></a></li>
             </ul>
         </nav>

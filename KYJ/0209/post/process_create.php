@@ -8,11 +8,13 @@ $filtered = array(
 
 $filename = $_FILES["uploadfile"]["name"];
 $tempname = $_FILES["uploadfile"]["tmp_name"];
-$folder = "../designSource/kyj/" . $filename;
+// $folder = "../designSource/kyj/" . $filename;
+$folder = '';
 $show_img = '';
 $msg = '';
 // $author_id = '';
 if(is_uploaded_file($tempname)){
+    $folder = "../designSource/kyj/" . $filename;
     if (move_uploaded_file($tempname, $folder)) {
         $msg = "이미지가 성공적으로 업로드되었습니다.<br>";
         $show_img = "<img class=\"show_img\" src=\"$folder\">";

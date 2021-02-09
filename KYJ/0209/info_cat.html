@@ -3,59 +3,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>멍냥펀치</title>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/main_header.css">
+    <link rel="stylesheet" href="/css/map.css">
     <link rel="stylesheet" href="/css/info.css">
     <script src="https://code.jquery.com/jquery-1.11.3.js" type="text/javascript"></script>
 </head>
 <body>
-    <p>고양이 정보</p> <br><br>
 
-    <a href="/info.html">메뉴로 이동</a>
+  <header>
+    <h1><a href="index.php"><img src="/designSource/images/logo_transparent_white.png"> 멍냥펀치</a></h1>
+    <h2 class="hide">대메뉴</h2>
+    <nav class="lnb">
+        <ul>
+        <li><a href="index.php"><span>메인홈</span></a></li>
+        <li><a href="php_post.php"><span>게시판</span></a></li>
+        <li><a href="map.php"><span>병원지도</span></a></li>
+        <li><a href="info.php"><span>정보</span></a></li>
+        </ul>
+    </nav>
+    <h2 class="hide">관련서비스</h2>
+    <nav class="spot">
+        <ul>
+        <li><a href="login.html">로그인</a></li>
+        <li><a href="register.html">회원가입</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <button onclick="training_button_cat()">훈련</button>
-    <a href="/info_cat.html"><button>사료</button></a>
+    <p id="info_header">고양이 정보</p> <br>
+    <p id="info_head">고양이 관련 사료와 훈련 정보를 제공합니다<br>
+      <a href="/Info_cat.html"><button id= "btn_a">사료</button></a>
+      <button id= "btn_b" onclick="cat_button()">훈련</button>
+    </p> <br>
+    
 
-    <table class="tg">
-        <thead>
-          <tr>
-            <th class="tg-visl" id="table_a">이미지</th>
-            <th class="tg-visl" id="table_b">사료</th>
-            <th class="tg-visl" id="table_c">대상</th>
-            <th class="tg-visl" id="table_d">판매가</th>
-            
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td id="trE_a" class="tg-ybzk"><a href="https://pethooh.com/product/detail.html?product_no=206&cate_no=156&display_group=3"><img src="https://pethooh.com/web/product/big/202010/3ec3290ecae74c0d09411e1afeee36c5.jpg" alt="Image" width="120" height="120"></a><br></td>
-            <td id="trE_b" class="tg-ybzk">펫후 Cat HG 맞춤솔루션 인도어 치킨 전연령 100g</td>
-            <td id="trE_c"class="tg-ybzk">고양이</td>
-            <td id="trE_d" class="tg-ybzk">1,000</td>
-            
-          </tr>
-          <tr>
-            <td id="trF_a" class="tg-ybzk"><a href="https://pethooh.com/product/detail.html?product_no=43&cate_no=156&display_group=1"><img src="https://pethooh.com/web/product/big/201910/c882a5c32b23e2a351edb8338ec265c2.jpg" alt="Image" width="120" height="120"></a></td>
-            <td id="trF_b" class="tg-ybzk">펫후 Cat 베스트 그레인프리 인도어<br>오리&닭 어덜트 4kg (1kg x 4입)</td>
-            <td id="trF_c" class="tg-ybzk">고양이</td>
-            <td id="trF_d" class="tg-ybzk">27,800</td>
-            
-          </tr>
-          <tr>
-            <td id="trG_a" class="tg-ybzk"><a href="https://pethooh.com/product/detail.html?product_no=201&cate_no=156&display_group=3"><img src="https://pethooh.com/web/product/big/202010/21ba4884a6bf89b7198a4a9d3efd497c.jpg" alt="Image" width="120" height="120"></a></td>
-            <td id="trG_b" class="tg-ybzk">펫후 Cat HG+ 그레인프리<br> 피모&장 치킨&연어 전연령 1.5kg</td>
-            <td id="trG_c" class="tg-ybzk">고양이</td>
-            <td id="trG_d" class="tg-ybzk">21,800</td>
+    <div class="main_table">
+      
+    
+      <ul class="table">
+          <li class="title" id="title_a"><b>펫후 인도어 치킨</b></li>
+          <li id="trA_a"><b>대상: </b>고양이</li>
+          <li id="trA_b"><b>판매가: </b> 14,800</li>
+          <li id="trA_c"><b>원재료: </b> 닭고기, 휴먼그레이드</li>
+          <li id="trA_d"><b>1일 권장 급여량:</b> 30g ~ 100g</li>
+          <li id="trA_e"><b>종류: </b> 배합사료</li>
           
-          </tr>
-          <tr>
-            <td id="trH_a" class="tg-ybzk"><a href="https://pethooh.com/product/detail.html?product_no=46&cate_no=156&display_group=1"><img src="https://pethooh.com/web/product/big/201910/f37d14a93e890ba4a13e6cbb48f0d34d.jpg" alt="Image" width="120" height="120"></a></td>
-            <td id="trH_b" class="tg-ybzk">펫후 Cat 베스트 오리&현미 키튼 1kg</td>
-            <td id="trH_c" class="tg-ybzk">고양이</td>
-            <td id="trH_d" class="tg-ybzk">6,900</td>
-            
-          </tr>
-        </tbody>
-        </table>
+          <li><a id="link_a"  target="_blank" class="pricebutton" href="https://pethooh.com/product/detail.html?product_no=206&cate_no=156&display_group=3"></span> 상세보기</a></li>
+      </ul>
+
+      <ul class="table">
+          <li class="title" id="title_b"><b>펫후 오리&닭 어덜트</b></li>
+          <li id="trB_a"><b>대상: </b>고양이</li>
+          <li id="trB_b"><b>판매가: </b>27,800 </li>
+          <li id="trB_c"><b>원재료: </b> 닭, 오리, 연어</li>
+          <li id="trB_d"><b>1일 권장 급여량:</b> 16g ~ 110g</li>
+          <li id="trB_e"><b>종류: </b> 배합사료</li>
+          
+          <li><a id="link_b" target="_blank" class="pricebutton" href="https://pethooh.com/product/detail.html?product_no=43&cate_no=156&display_group=1"></span> 상세보기</a></li>
+      </ul>
+
+      <ul class="table">
+          <li class="title" id="title_c"><b>펫후 오리&현미 키튼</b></li>
+          <li id="trC_a"><b>대상: </b>고양이</li>
+          <li id="trC_b"><b>판매가: </b> 6,900</li>
+          <li id="trC_c"><b>원재료: </b> 닭, 오리, 채소 </li>
+          <li id="trC_d"><b>1일 권장 급여량:</b>30g ~ 90g</li>
+          <li id="trC_e"><b>종류: </b> 배합사료</li>
+          
+          <li><a id="link_c"  target="_blank" class="pricebutton" href="https://pethooh.com/product/detail.html?product_no=46&cate_no=156&display_group=1"></span> 상세보기</a></li>
+      </ul>
+
+      
+        
 
         <script src="/js/info.js"></script>
+       
 </body>
 </html>
