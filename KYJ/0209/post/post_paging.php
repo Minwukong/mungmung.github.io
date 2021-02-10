@@ -24,9 +24,9 @@ $sql2 = "SELECT * FROM topic ORDER BY id LIMIT $start_num, $list_num";
 $result2 = mysqli_query($conn, $sql2) or die(mysqli_error($conn));
 while ($row2 = mysqli_fetch_array($result2)) {
     if (($row2['img_test'])) {
-        $list = $list . "<a class=\"postImg_wrapper\" href=\"php_post.php?id={$row2['id']}&page={$_GET['page']}\"><img class=\"postImg\" src=\"{$row2['img_test']}\"><div class=\"darkness\"><p>{$row2['title']}</p></div></a>";
+        $list = $list . "<a class=\"postImg_wrapper\" href=\"php_post.php?id={$row2['id']}&page=$page\"><img class=\"postImg\" src=\"{$row2['img_test']}\"><div class=\"darkness\"><p>{$row2['title']}</p></div></a>";
     } else {
-        $list = $list . "<a class=\"postImg_wrapper\" href=\"php_post.php?id={$row2['id']}&page={$_GET['page']}\"><img class=\"postImg\" src=\"./designSource/kyj/default_black.PNG\"><div class=\"darkness\"><p>{$row2['title']}</p></div></a>";
+        $list = $list . "<a class=\"postImg_wrapper\" href=\"php_post.php?id={$row2['id']}&page=$page\"><img class=\"postImg\" src=\"./designSource/kyj/default_black.PNG\"><div class=\"darkness\"><p>{$row2['title']}</p></div></a>";
         // $list = $list."<a class=\"postImg_wrapper\" href=\"index.php?id={$row['id']}\"><img class=\"postImg\" src=\"http://iamnothalim.dothome.co.kr/designSource/kyj/cat.jpg\"></a>";
     }
 }        
